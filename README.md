@@ -40,6 +40,8 @@ INSTALLATION:
 
 Once all the prerequisites have been successfully installed, just go to your dedicated dashboard where you want to install the card, run the following path of the commands "edit daschboard/plank -> add card -> manual ", and finally paste the card code, modifying with your own entities, resulting from the integration of your machine, the example entities entered.
 
+Remember to have your own image files of your car and possibly of the manufacturer of your car, inserting everything in the wwww folder with the path that will be most convenient for you to recall inside the card.
+
 You can add, in the case of electric cars, as many entities as you want and also insert the button for opening garage or gate if you have it available.
 
 I also release my automation which takes care of alerting and closing the doors after the car has been parked, in case we forget.
@@ -77,6 +79,8 @@ Integrazione correttamente configurata della propria Auto in Home Assistant.
 INSTALLAZIONE:
 
 Una volta installati correttamente tutti i prerequisiti, basterà recarsi sulla propria dashboard dedicata dove si desidera installare la card, eseguire il seguente percorso dei comandi "modifica daschboard/plancia -> aggiungi scheda -> manuale ", ed infine incollare il codice della card, modificando con le proprie entità, derivanti dall'integrazione della propria macchina, le ntità di esempio inserite.
+
+Ricordate di avere i propri file di immagine della propria auto ed eventualmente della casa produttrice della vostra auto, inserendo il tutto nella cartella wwww con il percorso che vi verrà più comodo richiamare all'interno della card.
 
 Potete aggiungere, nel caso di auto elettriche, tutte le entità che desiderate e anche inserire il pulsante per apertura garage o cancello se lo avete disponibile.
 
