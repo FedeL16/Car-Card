@@ -1,0 +1,15 @@
+alias: Portiere Macchina
+use_blueprint:
+  path: samuelthng/notifications.yaml
+  input:
+    notify_device: 2728afae6591d16be62e7e36dcfbc67c
+    title: Macchina Aperta
+    message: "Le portiere sono rimaste aperte "
+    confirm_text: "Chiudo "
+    dismiss_text: Lascio Aperto
+    confirm_action:
+      - service: lock.lock
+        target:
+          entity_id: lock.t_crock_door_locked
+        data: {}
+    enable_timeout: false
