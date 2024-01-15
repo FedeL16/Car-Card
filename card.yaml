@@ -1,0 +1,377 @@
+type: custom:swipe-card
+cards:
+  - square: false
+    type: grid
+    cards:
+      - type: picture-elements
+        image: /local/mappacasa/t_roc.png
+        title: T CROCK
+        elements:
+          - type: image
+            image: /local/mappacasa/forza.png
+            style:
+              '--mdc-icon-size': 30px
+              top: 0%
+              left: 95%
+              width: 12%
+          - type: state-label
+            entity: sensor.posizione_troc
+            title: Troc
+            style:
+              top: 0%
+              left: 13%
+              font-size: 1em
+              font-weight: 500
+          - type: state-icon
+            entity: device_tracker.t_crock_position
+            title: Posizione
+            icon: mdi:google-maps
+            tap_action:
+              action: more-info
+            style:
+              top: 0%
+              left: 5%
+            card_mod:
+              style: |
+                :host {
+                  --paper-item-icon-color: {% if is_state(config.entity, 'home') %}
+                                           green
+                                           {% else %}
+                                           red
+                                           {% endif %};
+                  }
+          - type: state-label
+            entity: sensor.t_crock_last_trip_length
+            title: Ultimo Viaggio
+            tap_action:
+              action: none
+            style:
+              top: 92%
+              left: 12%
+              font-size: 1em
+              font-weight: 600
+          - type: state-icon
+            entity: sensor.t_crock_last_trip_length
+            title: Ultimo Viaggio
+            icon: mdi:map-marker-distance
+            icon_color: blue
+            tap_action:
+              action: fire-dom-event
+              browser_mod:
+                service: browser_mod.popup
+                data:
+                  title: Dati Ultimo Viaggio
+                  content:
+                    type: custom:stack-in-card
+                    cards:
+                      - type: custom:layout-card
+                        layout_type: masonry
+                        layout: {}
+                        cards:
+                          - type: custom:mushroom-entity-card
+                            entity: sensor.t_crock_last_trip_average_fuel_consumption
+                            tap_action:
+                              action: more-info
+                            name: Consumo
+                            icon: mdi:fuel
+                            icon_color: orange
+                          - type: custom:mushroom-entity-card
+                            entity: sensor.t_crock_last_trip_average_speed
+                            name: Velocità Media
+                            tap_action:
+                              action: more-info
+                            icon: mdi:speedometer-slow
+                            icon_color: green
+                          - type: custom:mushroom-entity-card
+                            entity: sensor.t_crock_last_trip_duration
+                            tap_action:
+                              action: more-info
+                            name: Durata Ultimo Viaggio
+                            icon: mdi:clock-end
+                            icon_color: green
+            style:
+              top: 91%
+              left: 5%
+              '--paper-item-icon-color': orange
+          - type: state-icon
+            entity: sensor.bagagliaio_troc
+            icon: mdi:car-key
+            tap_action:
+              action: call-service
+              service: honeycomb
+              service_data:
+                size: 200
+                spacing: 10
+                buttons:
+                  - icon: mdi:car-door-lock
+                    color_type: icon
+                    color: orange
+                    styles:
+                      icon:
+                        - width: 200%
+                    tap_action:
+                      action: more-info
+                      service_data:
+                        entity_id: binary_sensor.t_crock_doors_locked
+                  - icon: mdi:window-closed
+                    color_type: icon
+                    color: orange
+                    styles:
+                      icon:
+                        - width: 200%
+                    tap_action:
+                      action: more-info
+                      service_data:
+                        entity_id: binary_sensor.t_crock_windows_closed
+                  - icon: mdi:car-key
+                    color_type: icon
+                    color: orange
+                    styles:
+                      icon:
+                        - width: 200%
+                    tap_action:
+                      action: more-info
+                      service_data:
+                        entity_id: binary_sensor.t_crock_hood_closed
+            style:
+              top: 40%
+              left: 93%
+              '--mdc-icon-size': 32px
+            card_mod:
+              style: |
+                :host {
+                  --paper-item-icon-color: {% if is_state(config.entity, 'Chiuso') %}
+                                           red
+                                           {% else %}
+                                           green
+                                           {% endif %};
+                  }
+          - type: state-label
+            entity: sensor.t_crock_odometer
+            style:
+              top: 93%
+              left: 91%
+            tap_action:
+              action: more-info
+          - type: state-icon
+            entity: sensor.t_crock_odometer
+            style:
+              top: 92%
+              left: 80%
+            tap_action:
+              action: more-info
+          - type: state-icon
+            entity: sensor.t_crock_oil_inspection_distance
+            title: Ultimo Viaggio
+            icon: mdi:oil
+            tap_action:
+              action: fire-dom-event
+              browser_mod:
+                service: browser_mod.popup
+                data:
+                  title: Manutenzione
+                  content:
+                    type: custom:stack-in-card
+                    cards:
+                      - type: custom:layout-card
+                        layout_type: masonry
+                        layout: {}
+                        cards:
+                          - type: custom:mushroom-entity-card
+                            entity: sensor.t_crock_oil_inspection_distance
+                            tap_action:
+                              action: more-info
+                            name: Prossimo Tagliando Km
+                            icon: mdi:oil-level
+                            icon_color: orange
+                          - type: custom:mushroom-entity-card
+                            entity: sensor.t_crock_service_inspection_days
+                            name: Prossimo Tagliando Giorni
+                            tap_action:
+                              action: more-info
+                            icon: mdi:oil-temperature
+                            icon_color: blue
+                          - type: custom:mushroom-entity-card
+                            entity: sensor.t_crock_odometer
+                            tap_action:
+                              action: more-info
+                            name: Km Totali
+                            icon: mdi:speedometer-medium
+                            icon_color: green
+            style:
+              top: 34%
+              left: 21%
+              '--paper-item-icon-color': cyan
+              '--mdc-icon-size': 40px
+          - type: state-icon
+            entity: binary_sensor.t_crock_parking_light
+            title: Posizione
+            icon: mdi:car-parking-lights
+            tap_action:
+              action: more-info
+            style:
+              top: 50%
+              left: 11%
+            card_mod:
+              style: |
+                :host {
+                  --paper-item-icon-color: {% if is_state(config.entity, 'off') %}
+                                           lightgrey
+                                           {% else %}
+                                           orange
+                                           {% endif %};
+      - type: horizontal-stack
+        cards:
+          - type: custom:bar-card
+            show_icon: true
+            align: split
+            columns: 1
+            max: 600
+            positions:
+              icon: inside
+              indicator: inside
+              name: inside
+              value: inside
+            unit_of_measurement: Km
+            severity:
+              - color: red
+                from: 0
+                to: 100
+              - color: orange
+                from: 100
+                to: 400
+              - color: green
+                from: 400
+                to: 600
+            style: |
+              ha-card { 
+                --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';
+                --ha-card-background: "rgba(0, 0, 0, 0.0)";
+                --paper-item-icon-color: 'var(--text-primary-color';
+                --ha-card-box-shadow: 'none';
+              }
+            icon: mdi:fuel
+            name: Autonomia
+            entity_row: true
+            entities:
+              - entity: sensor.t_crock_combustion_range
+          - type: custom:bar-card
+            show_icon: true
+            align: split
+            columns: 1
+            max: 100
+            positions:
+              icon: inside
+              indicator: inside
+              name: inside
+              value: inside
+            severity:
+              - color: red
+                from: 0
+                to: 30
+              - color: orange
+                from: 30
+                to: 70
+              - color: green
+                from: 70
+                to: 100
+            style: |
+              ha-card { 
+                --paper-card-background-color: 'rgba(0, 0, 0, 0.0)';
+                --ha-card-background: "rgba(0, 0, 0, 0.0)";
+                --paper-item-icon-color: 'var(--text-primary-color';
+                --ha-card-box-shadow: 'none';
+              }
+            icon: mdi:fuel
+            name: Livello Serbatoio
+            entity_row: true
+            entities:
+              - entity: sensor.t_crock_fuel_level
+      - type: horizontal-stack
+        cards:
+          - type: custom:mushroom-template-card
+            primary: Portiere
+            secondary: |+
+              {{ states('sensor.portiere_troc') }}
+
+            icon: |-
+              {% if is_state('lock.t_crock_door_locked', 'locked') %}
+                  mdi:lock
+                {% else %}
+                  mdi:lock-open
+                {% endif %}
+            entity: lock.t_crock_door_locked
+            icon_color: |-
+              {% if is_state('lock.t_crock_door_locked', 'locked') %}
+                  red
+                {% else %}
+                  green
+                {% endif %}
+            tap_action:
+              action: more-info
+            fill_container: false
+            alignment: center
+          - type: custom:mushroom-template-card
+            primary: Bagagliaio
+            secondary: |+
+              {{ states('sensor.bagagliaio_troc') }}
+
+            icon: |-
+              {% if is_state('lock.t_crock_trunk_locked', 'locked') %}
+                  mdi:lock
+                {% else %}
+                  mdi:lock-open
+                {% endif %}
+            entity: lock.t_crock_trunk_locked
+            icon_color: |-
+              {% if is_state('lock.t_crock_trunk_locked', 'locked') %}
+                  red
+                {% else %}
+                  green
+                {% endif %}
+            tap_action:
+              action: more-info
+            fill_container: false
+    columns: 1
+  - square: false
+    type: grid
+    cards:
+      - type: map
+        aspect_ratio: '16:10.5'
+        entities:
+          - entity: device_tracker.t_crock_position
+        dark_mode: true
+        default_zoom: 15
+        hours_to_show: 1
+      - type: custom:uptime-card
+        entity: sensor.posizione_troc
+        title_template: Posizione
+        icon: mdi:google-maps
+        ko_icon: mdi:home
+        ko: Casa
+        icon_adaptive_color: true
+        title_adaptive_color: true
+        hours_to_show: 24
+        color:
+          ok: red
+          ko: lightgreen
+          half: red
+        bar:
+          spacing: 5
+          height: 15
+          round: 4
+          amount: 24
+        show:
+          average: false
+          status: true
+          timeline: true
+          title: true
+        tooltip:
+          hour24: true
+        alignment:
+          status: spaced
+          header: right
+          icon_first: true
+        tap_action:
+          action: more-info
+    columns: 1
