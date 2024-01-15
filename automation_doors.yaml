@@ -1,0 +1,29 @@
+alias: Portiere Macchina
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - binary_sensor.t_crock_vehicle_moving
+    from: "on"
+    to: "off"
+    for:
+      hours: 0
+      minutes: 10
+      seconds: 0
+condition:
+  - condition: state
+    entity_id: lock.t_crock_door_locked
+    state: unlocked
+action:
+  - service: script.portiere_macchina
+    data: {}
+    response_variable: Chiuse
+  - service: telegram_bot.send_message
+    data:
+      message: Controlla le portiere
+      title: Macchina Aperta
+  - service: notify.notify
+    data:
+      title: Macchina Aperta
+      message: Controlla le portiere
+mode: single
