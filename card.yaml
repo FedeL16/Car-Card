@@ -111,8 +111,7 @@ cards:
                         - width: 200%
                     tap_action:
                       action: more-info
-                      service_data:
-                        entity_id: binary_sensor.t_crock_doors_locked
+                      entity: binary_sensor.t_crock_doors_locked
                   - icon: mdi:window-closed
                     color_type: icon
                     color: orange
@@ -121,8 +120,7 @@ cards:
                         - width: 200%
                     tap_action:
                       action: more-info
-                      service_data:
-                        entity_id: binary_sensor.t_crock_windows_closed
+                      entity: binary_sensor.t_crock_windows_closed
                   - icon: mdi:car-key
                     color_type: icon
                     color: orange
@@ -131,8 +129,7 @@ cards:
                         - width: 200%
                     tap_action:
                       action: more-info
-                      service_data:
-                        entity_id: binary_sensor.t_crock_hood_closed
+                      entity: binary_sensor.t_crock_hood_closed
             style:
               top: 40%
               left: 93%
