@@ -19,7 +19,7 @@ cards:
             title: Troc
             style:
               top: 0%
-              left: 13%
+              left: 18%
               font-size: 1em
               font-weight: 500
           - type: state-icon
