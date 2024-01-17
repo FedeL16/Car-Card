@@ -34,6 +34,8 @@ Downloadable from Hacs you need:
 
 - Swipe Card
 
+- Stack in Card
+
 Properly configured integration of your Auto into Home Assistant.
 
 INSTALLATION:
@@ -72,6 +74,7 @@ Scaricabili da Hacs occorrono:
 - Mushroom
 - Uptime Card
 - Swipe Card
+- Stack in Card
 
 Integrazione correttamente configurata della propria Auto in Home Assistant.
 
