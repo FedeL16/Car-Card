@@ -12,12 +12,13 @@ A simple Card to use to get a brief summary of the situation of your machine. Al
 
 Here is the result:
 
-![Screenshot 2024-01-15 alle 21 42 51](https://github.com/FedeL16/Car-Card/assets/141550943/4f4c9a04-b468-47e2-97d1-ac3dab74ee26)
-![Screenshot 2024-01-15 alle 21 43 20](https://github.com/FedeL16/Car-Card/assets/141550943/fdfc4c9f-02ba-4932-8179-3ecf4e9d3633)
-![Screenshot 2024-01-15 alle 21 43 39](https://github.com/FedeL16/Car-Card/assets/141550943/ad0a4ba9-2f0a-4ca2-9829-02ac1b5a205f)
-![Screenshot 2024-01-15 alle 21 43 55](https://github.com/FedeL16/Car-Card/assets/141550943/cafeea8a-5fbf-4228-b256-d4a5d48a4ebb)
-![Screenshot 2024-01-15 alle 21 44 25](https://github.com/FedeL16/Car-Card/assets/141550943/5cd12ed6-b49a-4dfd-8c76-ee894f2badca)
-
+![Screenshot 2024-01-15 alle 21 41 50](https://github.com/FedeL16/Car-Card/assets/141550943/fad8039b-24e2-4c4f-bf06-53bf302ad8f0)
+![Screenshot 2024-01-15 alle 21 43 39](https://github.com/FedeL16/Car-Card/assets/141550943/cf442702-7750-4718-abb1-601f2d2888e4)
+![Screenshot 2024-01-15 alle 21 43 55](https://github.com/FedeL16/Car-Card/assets/141550943/8bbb694e-29ff-46b1-92d4-fc49a3b5b5bb)
+![Screenshot 2024-01-15 alle 21 44 25](https://github.com/FedeL16/Car-Card/assets/141550943/44da6c64-2db1-4dd5-ae72-b3454665b801)
+![Screenshot 2024-01-18 alle 22 51 14](https://github.com/FedeL16/Car-Card/assets/141550943/32cab296-cbcc-4f86-b415-9daaef745761)
+![Screenshot 2024-01-18 alle 22 51 25](https://github.com/FedeL16/Car-Card/assets/141550943/f01c3592-e528-4e83-8300-0bafb83708f4)
+![Screenshot 2024-01-18 alle 22 51 35](https://github.com/FedeL16/Car-Card/assets/141550943/3d91ad8a-15e7-4353-a6ce-3e7283334416)
 PRE REQUIREMENTS
 
 Downloadable from Hacs you need:
@@ -56,11 +57,15 @@ Una semplice Card da utilizzare per avere una breve sintesi della situazione del
 
 Ecco il risultato:
 
-![Screenshot 2024-01-15 alle 21 42 51](https://github.com/FedeL16/Car-Card/assets/141550943/4f4c9a04-b468-47e2-97d1-ac3dab74ee26)
-![Screenshot 2024-01-15 alle 21 43 20](https://github.com/FedeL16/Car-Card/assets/141550943/fdfc4c9f-02ba-4932-8179-3ecf4e9d3633)
-![Screenshot 2024-01-15 alle 21 43 39](https://github.com/FedeL16/Car-Card/assets/141550943/ad0a4ba9-2f0a-4ca2-9829-02ac1b5a205f)
-![Screenshot 2024-01-15 alle 21 43 55](https://github.com/FedeL16/Car-Card/assets/141550943/cafeea8a-5fbf-4228-b256-d4a5d48a4ebb)
-![Screenshot 2024-01-15 alle 21 44 25](https://github.com/FedeL16/Car-Card/assets/141550943/5cd12ed6-b49a-4dfd-8c76-ee894f2badca)
+
+![Screenshot 2024-01-15 alle 21 41 50](https://github.com/FedeL16/Car-Card/assets/141550943/fad8039b-24e2-4c4f-bf06-53bf302ad8f0)
+![Screenshot 2024-01-15 alle 21 43 39](https://github.com/FedeL16/Car-Card/assets/141550943/cf442702-7750-4718-abb1-601f2d2888e4)
+![Screenshot 2024-01-15 alle 21 43 55](https://github.com/FedeL16/Car-Card/assets/141550943/8bbb694e-29ff-46b1-92d4-fc49a3b5b5bb)
+![Screenshot 2024-01-15 alle 21 44 25](https://github.com/FedeL16/Car-Card/assets/141550943/44da6c64-2db1-4dd5-ae72-b3454665b801)
+![Screenshot 2024-01-18 alle 22 51 14](https://github.com/FedeL16/Car-Card/assets/141550943/32cab296-cbcc-4f86-b415-9daaef745761)
+![Screenshot 2024-01-18 alle 22 51 25](https://github.com/FedeL16/Car-Card/assets/141550943/f01c3592-e528-4e83-8300-0bafb83708f4)
+![Screenshot 2024-01-18 alle 22 51 35](https://github.com/FedeL16/Car-Card/assets/141550943/3d91ad8a-15e7-4353-a6ce-3e7283334416)
+
 
 
 
