@@ -22,7 +22,9 @@ cards:
         primary: '{{ states.sensor.ultimo_orario_parcheggio.state }}'
         secondary: Ultima Sosta
         icon: mdi:timer-pause
-        entity: sensor.t_crock_parking_time
+        entity: sensor.sensor.ultimo_orario_parcheggio
+        tap_action:
+          action: more-info
         layout: vertical
         icon_color: |-
           {% if is_state('binary_sensor.t_crock_vehicle_moving', 'off') %}
@@ -34,8 +36,10 @@ cards:
         line_color: '#FF6384'
       - type: custom:mushroom-template-card
         icon: mdi:car-hatchback
-        entity: binary_sensor.t_crock_vehicle_moving
+        entity: sensor.t_crock_last_trip_average_fuel_consumption
         icon_color: blue
+        tap_action:
+          action: more-info
         primary: >-
           {{ states.sensor.t_crock_last_trip_average_fuel_consumption.state }} 
           litri/100 km
@@ -66,7 +70,9 @@ cards:
           {{ states.sensor.ultimo_aggiornamento_dati_macchina.state }} 
         secondary: Ultimo Aggiornamento
         icon: mdi:cloud-upload
-        entity: sensor.t_crock_last_connected
+        entity: sensor.ultimo_aggiornamento_dati_macchina
+        tap_action:
+          action: more-info
         layout: vertical
         icon_color: orange
         fill_container: true
